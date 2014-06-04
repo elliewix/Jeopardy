@@ -27,3 +27,18 @@ SOC Codes were collected from http://www.bls.gov/soc/.
   * Are certain locations hot spots for champions?
   * How have player locations changed over time?
 4.  Are players who defeat long running champions more likely to become long running champions?
+
+# Files
+
+* scripts-Jeopardy Processing.ipynb
+    * Processing script, will output the player info as csv
+* scripts-Jeopardy_Scraping.ipynb
+    * Code to gather the player text files
+* scripts-soccodes.csv
+    * csv file with SOC codes info
+* scripts-playerout.csv
+    * example output
+* players/
+    * player text files
+* OldScripts/
+    * this has been a long term and learning project, so I've archived older code here.
