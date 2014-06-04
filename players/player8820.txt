@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>J! Archive - Player statistics - Jenna Johnson</title>
+<link type="text/css" rel="styleSheet" href="http://www.j-archive.com/styles.css" />
+<link rel="shortcut icon" href="http://www.j-archive.com/favicon.ico" />
+</head>
+<body>
+
+<div id="navbar">
+  <span id="navbarlogo"><a href="http://www.j-archive.com"><img src="http://www.j-archive.com/j-a.gif" width="100" height="22" alt="J! Archive" /></a></span>
+  <span id="navbartext"><a href="http://www.j-archive.com/showseason.php?season=30">[current season]</a> <a href="http://www.j-archive.com/showseason.php?season=29">[last season]</a> <a href="http://www.j-archive.com/listseasons.php">[all seasons]</a> <a href="http://www.j-archive.com/listprizes.php">[prizes]</a> <a href="http://www.j-archive.com/wageringcalculator.php">[wagering calculator]</a> <a href="http://www.j-archive.com/help.php">[help]</a></span>
+
+  <form id="navbarsearch" action="http://www.j-archive.com/search.php" method="get" enctype="x-www-form-encoded">
+    <fieldset class="noborder">
+      <input type="text" class="search" name="search" id="search" maxlength="256" value="" />
+      <input type="submit" class="search_button" name="submit" value="Search" />
+    </fieldset>
+  </form>
+</div>
+<div id="content">
+            <table>
+              <tr><td valign="top" colspan="2"><p class="player_occupation_and_origin">A law student from Minneapolis, Minnesota...</p><p class="player_full_name">Jenna Johnson</p></td></tr>
+            </table>
+            <table>
+              <tr><td colspan="6"><a href="showplayer.php?player_id=8820">Jenna</a> appeared in the following archived game:</td></tr>
+              <tr><th align="left" width="130">Game</th><th width="60" align="right"><a href="help.php#jeopardyround" target="_blank">J!</a> score</th><th width="60" align="right"><a href="help.php#doublejeopardyround" target="_blank">DJ!</a> score</th><th width="60" align="right"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a> score</th><th width="80" align="right"><a href="help.php#coryatscore" target="_blank">Coryat score</a></th><th align="center">R</th><th align="center">W</th><th align="center">Rebs.</th><th width="60" align="center"><a href="help.php#dailydouble" target="_blank">DD</a>s</th><th width="70" align="right"><a href="help.php#dailydouble" target="_blank">DD</a> gain/loss</th><th width="35" align="center"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a></th><th width="70" align="right"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a> gain/loss</th><th width="40" align="center"><a href="help.php#battingaverage" target="_blank">BA</a></th><th width="40" align="center"><a href="help.php#teambattingaverage" target="_blank">TBA</a></th></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=4376">#6734, aired&#160;2013-12-19</a></td><td align="right">$5,000</td><td align="right">$11,400</td><td align="right">$9,199</td><td align="right">$13,400</td><td align="center">18</td><td align="center">1</td><td align="center">0</td><td align="center">0/1</td><td align="right">-$2,000</td><td align="center">W</td><td align="right">-$2,201</td><td align="center">.305</td><td align="center">.698</td></tr>
+            </table>
+</div>
+
+<div id="disclaimer">The J! Archive is created by fans, for fans.  The <i><a href="http://www.jeopardy.com">Jeopardy!</a></i> game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law.  This website is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.  Join the discussion at <a href="http://jboard.tv">JBoard.tv</a>.</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script src="http://www.j-archive.com/scripts.js" type="text/javascript"></script>
+</body>
+</html>

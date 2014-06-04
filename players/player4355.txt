@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>J! Archive - Player statistics - Christian Haines</title>
+<link type="text/css" rel="styleSheet" href="http://www.j-archive.com/styles.css" />
+<link rel="shortcut icon" href="http://www.j-archive.com/favicon.ico" />
+</head>
+<body>
+
+<div id="navbar">
+  <span id="navbarlogo"><a href="http://www.j-archive.com"><img src="http://www.j-archive.com/j-a.gif" width="100" height="22" alt="J! Archive" /></a></span>
+  <span id="navbartext"><a href="http://www.j-archive.com/showseason.php?season=30">[current season]</a> <a href="http://www.j-archive.com/showseason.php?season=29">[last season]</a> <a href="http://www.j-archive.com/listseasons.php">[all seasons]</a> <a href="http://www.j-archive.com/listprizes.php">[prizes]</a> <a href="http://www.j-archive.com/wageringcalculator.php">[wagering calculator]</a> <a href="http://www.j-archive.com/help.php">[help]</a></span>
+
+  <form id="navbarsearch" action="http://www.j-archive.com/search.php" method="get" enctype="x-www-form-encoded">
+    <fieldset class="noborder">
+      <input type="text" class="search" name="search" id="search" maxlength="256" value="" />
+      <input type="submit" class="search_button" name="submit" value="Search" />
+    </fieldset>
+  </form>
+</div>
+<div id="content">
+            <table>
+              <tr><td valign="top" width="115"><img src="players/ChristianHainesToC.jpg" width="115" height="144" border="0"></td><td valign="top" width="100%"><p class="player_occupation_and_origin">A college student originally from Newport News, Virginia...</p><p class="player_full_name">Christian Haines</p></td></tr>
+            </table>
+            <table>
+              <tr><td colspan="6"><a href="showplayer.php?player_id=4355">Christian</a> appeared in the following 2 archived games:</td></tr>
+              <tr><th align="left" width="130">Game</th><th width="60" align="right"><a href="help.php#jeopardyround" target="_blank">J!</a> score</th><th width="60" align="right"><a href="help.php#doublejeopardyround" target="_blank">DJ!</a> score</th><th width="60" align="right"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a> score</th><th width="80" align="right"><a href="help.php#coryatscore" target="_blank">Coryat score</a></th><th align="center">R</th><th align="center">W</th><th align="center">Rebs.</th><th width="60" align="center"><a href="help.php#dailydouble" target="_blank">DD</a>s</th><th width="70" align="right"><a href="help.php#dailydouble" target="_blank">DD</a> gain/loss</th><th width="35" align="center"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a></th><th width="70" align="right"><a href="help.php#finaljeopardyround" target="_blank">FJ!</a> gain/loss</th><th width="40" align="center"><a href="help.php#battingaverage" target="_blank">BA</a></th><th width="40" align="center"><a href="help.php#teambattingaverage" target="_blank">TBA</a></th></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=2172">#5332, aired&#160;2007-11-13</a></td><td align="right">$5,600</td><td align="right">$13,100</td><td align="right">$15,401</td><td align="right">$13,600</td><td align="center">19</td><td align="center">3</td><td align="center">0</td><td align="center">1/1</td><td align="right">$1,500</td><td align="center">R</td><td align="right">$2,301</td><td align="center">.339</td><td align="center">.889</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=2163">#5329, aired&#160;2007-11-08</a></td><td align="right">$11,400</td><td align="right">$18,800</td><td align="right">$24,001</td><td align="right">$18,800</td><td align="center">28</td><td align="center">3</td><td align="center">1</td><td align="center">2/3</td><td align="right">$2,600</td><td align="center">R</td><td align="right">$5,201</td><td align="center">.475</td><td align="center">.778</td></tr>
+              <tr><th align="right">Averages</th><td align="right">$8,500</td><td align="right">$15,950</td><td align="right">$19,701</td><td align="right">$16,200</td><td align="center">23.50</td><td align="center">3.00</td><td align="center">0.50</td><td align="center">75%/67%</td><td align="right">$2,050</td><td align="center">100%</td><td align="right">$3,751</td><td align="center">.408</td><td align="center">.833</td></tr>
+              <tr><td colspan="6">Previously, <a href="showplayer.php?player_id=2908">Christian</a> appeared in the following 5 archived games:</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=1447">#5122, aired&#160;2006-12-12</a></td><td align="right">$4,200</td><td align="right">$15,100</td><td align="right">$5,399</td><td align="right">$14,800</td><td align="center">26</td><td align="center">9</td><td align="center">0</td><td align="center">2/2</td><td align="right">$2,300</td><td align="center">W</td><td align="right">-$9,701</td><td align="center">.433</td><td align="center">.841</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=1446">#5121, aired&#160;2006-12-11</a></td><td align="right">$10,800</td><td align="right">$28,800</td><td align="right">$38,800</td><td align="right">$26,400</td><td align="center">37</td><td align="center">4</td><td align="center">4</td><td align="center">2/2</td><td align="right">$4,800</td><td align="center">R</td><td align="right">$10,000</td><td align="center">.633</td><td align="center">.921</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=1433">#5120, aired&#160;2006-12-08</a></td><td align="right">$9,300</td><td align="right">$27,100</td><td align="right">$25,200</td><td align="right">$24,600</td><td align="center">31</td><td align="center">5</td><td align="center">2</td><td align="center">2/2</td><td align="right">$4,100</td><td align="center">W</td><td align="right">-$1,900</td><td align="center">.517</td><td align="center">.841</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=1432">#5119, aired&#160;2006-12-07</a></td><td align="right">$4,600</td><td align="right">$18,600</td><td align="right">$19,001</td><td align="right">$18,600</td><td align="center">27</td><td align="center">2</td><td align="center">1</td><td align="center">0/0</td><td align="right">$0</td><td align="center">R</td><td align="right">$401</td><td align="center">.483</td><td align="center">.762</td></tr>
+              <tr><td align="left" valign="top" style="width:140px"><a href="showgame.php?game_id=1431">#5118, aired&#160;2006-12-06</a></td><td align="right">$5,400</td><td align="right">$17,000</td><td align="right">$21,999</td><td align="right">$16,800</td><td align="center">25</td><td align="center">5</td><td align="center">2</td><td align="center">1/2</td><td align="right">$1,000</td><td align="center">R</td><td align="right">$4,999</td><td align="center">.433</td><td align="center">.857</td></tr>
+              <tr><th align="right">Averages</th><td align="right">$6,860</td><td align="right">$21,320</td><td align="right">$22,080</td><td align="right">$20,240</td><td align="center">29.20</td><td align="center">5.00</td><td align="center">1.80</td><td align="center">88%/53%</td><td align="right">$2,440</td><td align="center">60%</td><td align="right">$760</td><td align="center">.500</td><td align="center">.844</td></tr>
+              <tr><th align="right">Grand Averages</th><td align="right">$7,329</td><td align="right">$19,786</td><td align="right">$21,400</td><td align="right">$19,086</td><td align="center">27.57</td><td align="center">4.43</td><td align="center">1.43</td><td align="center">83%/57%</td><td align="right">$2,329</td><td align="center">71%</td><td align="right">$1,614</td><td align="center">.474</td><td align="center">.841</td></tr>
+            </table>
+</div>
+
+<div id="disclaimer">The J! Archive is created by fans, for fans.  The <i><a href="http://www.jeopardy.com">Jeopardy!</a></i> game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law.  This website is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.  Join the discussion at <a href="http://jboard.tv">JBoard.tv</a>.</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script src="http://www.j-archive.com/scripts.js" type="text/javascript"></script>
+</body>
+</html>
