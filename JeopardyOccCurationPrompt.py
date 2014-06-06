@@ -6,7 +6,7 @@ from pprint import pprint
 
 # Helper functions
 
-playerfile= 'playerout.csv'
+playerfile= 'playeroutfromprompt.csv'
 socfile = 'scripts-soccodes.csv'
 
 # return a fail report string
@@ -23,8 +23,8 @@ def failreport(dict):
 def nicelistprint(list):
     result = ""
     for each in list[:-1]:
-        result = result + each + " :: "
-    result = result + list[-1]
+        result = str(result) + str(each) + "\t"
+    result = result + str(list[-1])
     return result
 
 def selectmatch(matches,matchindex,key,dict,curatorname):
@@ -39,21 +39,31 @@ def markskipped(key,dict,curatorname):
     dict[key]+= [True,curatorname,True] #curated true, name, skipped true
 
 # prepare the dictionary for csv export
-def prettyprintdict(dict,headers):
+# function to process playerdict and prepare it for csv output
+# format needs to be a list of dictionaries, key=header and value=value
+# [{head:value, head:value}]
+
+#headers = ["PlayerID","Occupation","Name","MatchedSocCode","MatchedSocCore","MatchedSocTitle","CuratedBool","Curator","SkippedBool"]
+#outputfilename = 'playerout.csv'
+def output(dict,headers,outputfilename):
     list = []
-    for key, value in dict.iteritems():
+    for key, playervalue in dict.iteritems():
         tempdict = {}
         tempdict[headers[0]] = key
-        tempdict[headers[1]] = value[0]
-        tempdict[headers[2]] = value[1]
-        if value[2] == False:
-            tempdict[headers[3]] = False
-        else:
-            tempdict[headers[3]] = value[2][0]
-            tempdict[headers[4]] = value[2][1]
-            tempdict[headers[5]] = value[2][2]
+        playervalue.insert(0,key)
+        for i, each in enumerate(headers):
+            try:
+                tempdict[headers[i]] = playervalue[i]
+            except:
+                tempdict[headers[i]] = ''
         list.append(tempdict)
-    return list
+    with open(outputfilename,'w') as f:
+        f_csv = csv.DictWriter(f,headers)
+        f_csv.writeheader()
+        f_csv.writerows(list)
+
+def lookingat(playerkey,name,origocc):
+    print "Looking at " + playerkey + ": " + name + "\nScraped occupation: " + origocc + "\n"
 
 playerdict = {}
 # Initial structure:
@@ -78,6 +88,9 @@ with open(socfile, 'rU') as soccodes:
     for row in soccodes:
         socdict[row[0]] = row[:-1] # again, killing the last element because unused
 
+headers = ["PlayerID","Occupation","Name","MatchedSocCode","MatchedSocCore","MatchedSocTitle","CuratedBool","Curator","SkippedBool"]
+                        
+
 # read through the dictionary of players and look for players with unmatched occupations
 
 print "\n\n"
@@ -88,38 +101,66 @@ print "Welcome, " + curatorname + ", I am currently looking at: \nPlayer file: "
 # TODO: allow user to specify file names
 print "Let's get started!\nThis program will search to see if the original occupation is contained inside\na soc code sub name.\n"
 
+flags = []
 
 for playerkey, value in playerdict.iteritems():
-    if value[2] == 'False':
-        origocc = value[0].lower()
-        name = value[1]
+    if value[2] == 'False' and value[6] != 'TRUE':
+        origocc, name = value[0].lower(), value[1]
         # 1) Look for the original occ string in the soccode dictionary
-        print "Looking at " + playerkey + ": " + name + "\nScraped occupation: " + origocc
+ 
         matches = []
+
         # loop through the soccodes and assemble matches
         for sockey, value in socdict.iteritems():
             if origocc in value[2].lower():
                 matches.append(value)
+
         if len(matches) > 0:
+            lookingat(playerkey,name,origocc)
             print "I found the following matches:"
             for index, value in enumerate(matches):
-                print "Match " + str(index +1) + ": " + nicelistprint(value)
-            matchchoice = raw_input("\nPlease select a match: ")
+                print "\tMatch " + str(index +1) + ": " + nicelistprint(value)
+
+            print "Type the number of the match to select it."
+            print "Type 'skip' to skip a player.\nType 'done' to quit and save."
+            print "Type 'none' to reject all matches and manually set the occupation."
+            matchchoice = raw_input("\nMake your choice: ")
             # TODO: make this more robust against crap input
-            if matchchoice.lower() == "skip":
-                print "OK, skipped"
-                markskipped(playerkey,playerdict,curatorname)
-                print playerdict[playerkey]
-                raw_input("Press enter to continue.")
-                #TODO, do undo
-            else:
-                matchchoice = int(matchchoice)
-                selectmatch(matches,matchchoice,playerkey,playerdict,curatorname)
-                print "OK, I made that selection:"
-                print playerdict[playerkey]
-                raw_input("Press enter to continue.") #TODO: add an undo option
+            print "\n\n"
+            while True:
+                if matchchoice.lower() == "skip":
+                    print "OK, skipped"
+                    markskipped(playerkey,playerdict,curatorname)
+                    print playerdict[playerkey]
+                    raw_input("Press enter to continue.")
+                    #TODO, do undo
+                    print "\n\n\n\n"
+
+                elif matchchoice.lower() == 'done':
+                    prompt = raw_input("do you want to save? ")
+                    if prompt.lower() == 'yes':
+                        outputfilename = 'playeroutfromprompt.csv'
+                        output(playerdict,headers,outputfilename)
+                    break
+
+                elif matchchoice.lower() == 'none':
+                    print "You have chosen to reject these.\nPlease review the coding sheet and enter a standard name."
+                    while True:
+                else:
+                    matchchoice = int(matchchoice)
+                    selectmatch(matches,matchchoice,playerkey,playerdict,curatorname)
+                    print "OK, I made that selection.  The player information is now:"
+                    print "\t" + nicelistprint(headers)
+                    print "\t" + nicelistprint(playerdict[playerkey])
+                    cont = raw_input("Do you want to continue? Type no to quit. ") #TODO: add an undo option
+                    if cont.lower() == 'no':
+                        prompt = raw_input("do you want to save? Type yes to save. ")
+                        if prompt.lower() == 'yes':
+                            outputfilename = 'playeroutfromprompt.csv'
+                            output(playerdict,headers,outputfilename)
+                    print "\n\n\n\n"
         else:
-            print "I found no matches, moving on for now"
+            continue #print "I found no matches, moving on for now"
             # 2) report the results on the screen
             # 3) prompt the user to select one of the options or reject them
                 # if selected, add to the player, return to main loop
@@ -134,6 +175,4 @@ for playerkey, value in playerdict.iteritems():
             # 5) prompt user to continue to next player or quit and export
                 # Continue: next player
                 # export: call export method
-    else: 
-        continue # continue back to playerdict loop
 
