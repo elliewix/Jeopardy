@@ -135,6 +135,7 @@ for playerkey, value in playerdict.iteritems():
                     raw_input("Press enter to continue.")
                     #TODO, do undo
                     print "\n\n\n\n"
+                    break
 
                 elif matchchoice.lower() == 'done':
                     prompt = raw_input("do you want to save? ")
@@ -145,7 +146,15 @@ for playerkey, value in playerdict.iteritems():
 
                 elif matchchoice.lower() == 'none':
                     print "You have chosen to reject these.\nPlease review the coding sheet and enter a standard name."
-                    while True:
+                    print "Enter the code or say 'go back'"
+                    prompt = raw_input("Your choice: ")
+                    if prompt.lower() == 'go back':
+                        break
+                    else:
+                        try:
+                            print socdict[prompt]
+                        except:
+                            continue
                 else:
                     matchchoice = int(matchchoice)
                     selectmatch(matches,matchchoice,playerkey,playerdict,curatorname)
