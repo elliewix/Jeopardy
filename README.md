@@ -2,7 +2,7 @@
 
 Processing information about Jeopardy players
 
-**Note:** This is a deprecated version.  I have an updated and version in a private project.  Although the research questions are the same.
+**Note:** This is a deprecated version.  I have rewritten most everything and am in the process of conducing data analysis in another repo.
 
 This is a personal project to scrape information about Jeopardy players, prepare data for analysis, and eventually run those tests.
 
