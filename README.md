@@ -2,6 +2,8 @@
 
 Processing information about Jeopardy players
 
+**Note:** This is a deprecated version.  I have an updated and version in a private project.  Although the research questions are the same.
+
 This is a personal project to scrape information about Jeopardy players, prepare data for analysis, and eventually run those tests.
 
 # Steps
